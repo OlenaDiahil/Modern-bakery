@@ -1,3 +1,4 @@
+/* Base */
 :root {
   --lights: #faf4ea;
   --dark-brown: #31261a;
@@ -7,7 +8,15 @@
   --gray: #cfcfbc;
 }
 
+/* Властивості тексту: font-style, font-variant, font-weight, font-size, font-family, text-align, text-indent, text-decoration.
+Властивості блоків: margin (зовнішній відступ), border (межа), padding (внутрішній відступ).
+Властивості кольору та фону: color, background-color.
+Властивості позиціонування: position, top, left, z-index.  */
+
 body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  line-height: 1.5; /*line-height 27/  font-size  18  = 1.5 */
   color: var(--dark-brown);
 }
 
@@ -32,15 +41,18 @@ a {
   overflow: hidden;
 }
 
+/* header */
 .nav-link {
   color: var(--lights);
 }
 
 .nav-link:hover {
+  font-weight: 600;
   color: var(--light-green);
 }
 
 .button-call {
+  font-weight: 600;
   color: var(--lights);
   background-color: var(--light-green);
   border: 2px solid var(--light-green);
@@ -54,32 +66,94 @@ a {
   background-color: transparent;
 }
 
+/* hero */
+
 .hero-title {
+  font-weight: 900;
+  font-size: 128px;
   color: var(--lights);
+}
+
+.center-title {
+  text-align: center;
 }
 
 .accent {
   color: var(--light-green);
 }
 
+.semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 .accent-second {
   color: var(--dark-green);
 }
 
+/* advantages */
+
 .advantages-list {
+  font-weight: 300;
+  font-size: 20px;
   color: var(--lights);
   background-color: var(--light-green);
 }
 
+/* traditions */
+
+.section-title {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 1.31;
+}
+
+/* chefs */
+
+.chefe-name {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+/* formats */
+
 .list-formats {
+  font-weight: 300;
+  font-size: 14px;
   color: var(--lights);
 }
 
+.formats-name {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+/* contacts */
+
+.callto-action {
+  color: var(--dark-green);
+}
+
+.descr-privacy {
+  font-size: 12px;
+}
+
 .link-privacy {
-  color: var(--dark-brown);
   text-decoration: underline;
+  color: var(--dark-brown);
+}
+
+/* footer */
+
+.nav-link.address {
+  font-weight: 300;
+  font-size: 16px;
 }
 
 .data-protected {
+  font-size: 14px;
   color: var(--light-brown);
 }

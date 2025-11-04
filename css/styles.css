@@ -37,6 +37,8 @@ p {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -88,6 +90,22 @@ a {
   background-color: transparent;
 }
 
+/* header */
+
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
+.link-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 64px;
+}
+
 /* hero */
 
 .hero-section {
@@ -124,13 +142,16 @@ a {
 
 .advantages-section {
   padding: 16px 0;
+  background-color: var(--light-green);
 }
 
 .advantages-list {
   font-weight: 300;
   font-size: 20px;
   color: var(--lights);
-  background-color: var(--light-green);
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 /* traditions */

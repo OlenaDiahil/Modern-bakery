@@ -13,11 +13,26 @@
 Властивості кольору та фону: color, background-color.
 Властивості позиціонування: position, top, left, z-index.  */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   line-height: 1.5; /*line-height 27/  font-size  18  = 1.5 */
+  margin: 0;
   color: var(--dark-brown);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 ul {
@@ -39,6 +54,13 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 /* header */
@@ -68,6 +90,10 @@ a {
 
 /* hero */
 
+.hero-section {
+  padding: 272px 0;
+}
+
 .hero-title {
   font-weight: 900;
   font-size: 128px;
@@ -96,6 +122,10 @@ a {
 
 /* advantages */
 
+.advantages-section {
+  padding: 16px 0;
+}
+
 .advantages-list {
   font-weight: 300;
   font-size: 20px;
@@ -105,10 +135,27 @@ a {
 
 /* traditions */
 
+.section {
+  padding: 48px 0;
+}
+
+.section-traditions {
+  padding-top: 96px;
+}
+
 .section-title {
   font-weight: 900;
   font-size: 64px;
   line-height: 1.31;
+  margin-bottom: 80px;
+}
+
+.section-title.title-traditions {
+  margin-bottom: 42px;
+}
+
+.descr-traditions {
+  margin-bottom: 42px;
 }
 
 /* chefs */
@@ -116,6 +163,11 @@ a {
 .chefe-name {
   font-weight: 600;
   font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.descr-chefe {
+  margin-bottom: 18px;
 }
 
 /* formats */
@@ -129,12 +181,22 @@ a {
 .formats-name {
   font-weight: 600;
   font-size: 24px;
+  margin-bottom: 16px;
 }
 
 /* contacts */
 
+.section-title.contacts-title {
+  margin-bottom: 16px;
+}
+
 .callto-action {
+  margin-bottom: 42px;
   color: var(--dark-green);
+}
+
+.button-call.button-form {
+  margin-bottom: 16px;
 }
 
 .descr-privacy {

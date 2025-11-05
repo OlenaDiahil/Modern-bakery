@@ -13,7 +13,9 @@
 Властивості кольору та фону: color, background-color.
 Властивості позиціонування: position, top, left, z-index.  */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -23,6 +25,7 @@ body {
   line-height: 1.5; /*line-height 27/  font-size  18  = 1.5 */
   margin: 0;
   color: var(--dark-brown);
+  background-color: var(--lights);
 }
 
 h1,
@@ -41,7 +44,12 @@ ul {
   padding: 0;
 }
 
+li {
+  display: block;
+}
+
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -110,6 +118,10 @@ a {
 
 .hero-section {
   padding: 272px 0;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
 
 .hero-title {
@@ -164,6 +176,12 @@ a {
   padding-top: 96px;
 }
 
+.container-tradition {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .section-title {
   font-weight: 900;
   font-size: 64px;
@@ -179,7 +197,46 @@ a {
   margin-bottom: 42px;
 }
 
+.img-tradition {
+  border-radius: 400px 400px 0 0;
+}
+
 /* chefs */
+.chefs-title::before {
+  content: '';
+  display: block;
+  width: 352px;
+  height: 2px;
+  background-color: #cfcfbc;
+}
+
+.chefs-title::after {
+  content: '';
+  display: block;
+  width: 352px;
+  height: 2px;
+  background-color: #cfcfbc;
+}
+
+.chefe-list {
+  display: flex;
+  gap: 40px 30px;
+}
+
+.chefe-item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+
+.chefe-info {
+  display: flex;
+  gap: 30px;
+}
+
+.chefe-photo {
+  max-height: 390px;
+  box-shadow: -8px 8px 0 0 var(--lights), -8px 8px 0 2px var(--light-brown);
+  border-radius: 4px 4px 4px 200px;
+}
 
 .chefe-name {
   font-weight: 600;
@@ -193,10 +250,44 @@ a {
 
 /* formats */
 
-.list-formats {
+.container-formats {
   font-weight: 300;
   font-size: 14px;
   color: var(--lights);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 33px;
+}
+
+.button-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--dark-brown);
+  border-radius: 50%;
+  fill: var(--dark-brown);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-arrow:hover {
+  fill: var(--lights);
+  background-color: var(--dark-brown);
+}
+
+.list-formats {
+  display: flex;
+  gap: 20px;
+}
+
+.item-format {
+  max-width: 349px;
+  height: 444px;
+  flex-basis: calc((100% - 40px) / 3);
+  background-color: var(--light-brown);
 }
 
 .formats-name {
@@ -206,6 +297,10 @@ a {
 }
 
 /* contacts */
+
+.contacts-section {
+  padding-bottom: 96px;
+}
 
 .section-title.contacts-title {
   margin-bottom: 16px;
@@ -231,9 +326,25 @@ a {
 
 /* footer */
 
+.footer {
+  background-color: var(--dark-brown);
+  background-image: url(../images/footer.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
 .nav-link.address {
   font-weight: 300;
   font-size: 16px;
+}
+
+.social-link {
+  fill: var(--lights);
+}
+
+.social-link:hover svg {
+  fill: var(--light-green);
 }
 
 .data-protected {

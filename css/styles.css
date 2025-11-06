@@ -74,8 +74,18 @@ a {
 }
 
 /* header */
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding-top: 32px;
+}
+
 .nav-link {
   color: var(--lights);
+  height: ;
 }
 
 .nav-link:hover {
@@ -97,8 +107,6 @@ a {
   color: var(--dark-green);
   background-color: transparent;
 }
-
-/* header */
 
 .header-list {
   display: flex;
@@ -202,24 +210,32 @@ a {
 }
 
 /* chefs */
-.chefs-title::before {
+
+.chefs-title {
+  position: relative;
+}
+
+.chefs-title::before,
+.chefs-title::after {
   content: '';
-  display: block;
+  position: absolute;
+  bottom: 24px;
   width: 352px;
   height: 2px;
   background-color: #cfcfbc;
 }
 
+.chefs-title::before {
+  left: 0;
+}
+
 .chefs-title::after {
-  content: '';
-  display: block;
-  width: 352px;
-  height: 2px;
-  background-color: #cfcfbc;
+  right: 0;
 }
 
 .chefe-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 40px 30px;
 }
 
@@ -287,7 +303,26 @@ a {
   max-width: 349px;
   height: 444px;
   flex-basis: calc((100% - 40px) / 3);
-  background-color: var(--light-brown);
+  background-image: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--dark-brown) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  border-radius: 16px;
+  position: relative;
+}
+
+.img-format {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .formats-name {
@@ -300,6 +335,11 @@ a {
 
 .contacts-section {
   padding-bottom: 96px;
+}
+
+.container-contacts {
+  display: flex;
+  gap: 32px;
 }
 
 .section-title.contacts-title {
@@ -324,6 +364,10 @@ a {
   color: var(--dark-brown);
 }
 
+.map {
+  border-radius: 16px;
+}
+
 /* footer */
 
 .footer {
@@ -332,11 +376,50 @@ a {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  padding: 32px 0;
+}
+
+.footer-container {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-basis: 50%;
+  gap: 20px;
+}
+
+.logo-footer {
+  flex-grow: 1;
+}
+
+.list-link-footer {
+  flex-grow: 1;
+}
+
+.address-wrapper {
+  flex-grow: 1;
+}
+
+.footer-parth {
+  flex-grow: 1;
+}
+
+.list-link-footer :not(:last-child) {
+  margin-bottom: 16px;
 }
 
 .nav-link.address {
+  display: block;
   font-weight: 300;
   font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  gap: 22px;
 }
 
 .social-link {

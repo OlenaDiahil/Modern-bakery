@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
         <nav class="header-list">
           <a href="./index.html"
@@ -144,9 +144,15 @@
             </button>
             <ul class="list-formats">
               <li class="item-format">
-                <article>
-                  <!-- <img src="./images/walrus.jpg" alt="Формат Walrus" /> -->
-                  <div>
+                <article class="card-format">
+                  <img
+                    class="img-format"
+                    src="./images/walrus.jpg"
+                    alt="Формат Walrus"
+                    width="349"
+                    height="444"
+                  />
+                  <div class="descr-format">
                     <h3 class="formats-name" lang="en">Walrus</h3>
                     <p>Площа: до 120 м2</p>
                     <p>Меню: розширене меню</p>
@@ -159,9 +165,15 @@
                 </article>
               </li>
               <li class="item-format">
-                <article>
-                  <!-- <img src="./images/horseshoe.jpg" alt="Формат Horseshoe" /> -->
-                  <div>
+                <article class="card-format">
+                  <img
+                    class="img-format"
+                    src="./images/horseshoe.jpg"
+                    alt="Формат Horseshoe"
+                    width="349"
+                    height="444"
+                  />
+                  <div class="descr-format">
                     <h3 class="formats-name" lang="en">Horseshoe</h3>
                     <p>Площа: до 25 м2</p>
                     <p>Меню: найпопулярніші позиції меню</p>
@@ -171,9 +183,15 @@
                 </article>
               </li>
               <li class="item-format">
-                <article>
-                  <!-- <img src="./images/handlebar@2x.jpg" alt="Формат Handlebar" /> -->
-                  <div>
+                <article class="card-format">
+                  <img
+                    class="img-format"
+                    src="./images/handlebar@2x.jpg"
+                    alt="Формат Handlebar"
+                    width="349"
+                    height="444"
+                  />
+                  <div class="descr-format">
                     <h3 class="formats-name" lang="en">Handlebar</h3>
                     <p>Площа: до 15 м2</p>
                     <p>Меню: найпопулярніші позиції меню</p>
@@ -193,90 +211,102 @@
       </section>
       <section class="section contacts-section" id="section-contacts">
         <div class="container">
-          <h2 class="section-title contacts-title">
-            Приєднуйся до <br />мережі пекарень
-          </h2>
-          <p class="callto-action">Заповни форму, щоб ми звʼязались з тобою!</p>
-          <!-- Form -->
-          <button class="button-call button-form" type="button">
-            Замовити дзвінок
-          </button>
-          <p class="descr-privacy">
-            Натискаючи на кнопку я погоджуюсь
-            <a class="link-privacy" href="#" target="_blank"
-              >з політикою конфіденційності</a
-            >
-          </p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1636304352746!2d30.48869837643773!3d50.45667757159345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1762159015227!5m2!1suk!2sua"
-            width="603"
-            height="595"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="container-contacts">
+            <div class="form-container">
+              <h2 class="section-title contacts-title">
+                Приєднуйся до <br />мережі пекарень
+              </h2>
+              <p class="callto-action">
+                Заповни форму, щоб ми звʼязались з тобою!
+              </p>
+              <!-- Form -->
+              <button class="button-call button-form" type="button">
+                Замовити дзвінок
+              </button>
+              <p class="descr-privacy">
+                Натискаючи на кнопку я погоджуюсь
+                <a class="link-privacy" href="#" target="_blank"
+                  >з політикою конфіденційності</a
+                >
+              </p>
+            </div>
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1636304352746!2d30.48869837643773!3d50.45667757159345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1762159015227!5m2!1suk!2sua"
+              width="603"
+              height="595"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container">
-        <nav>
-          <a href="./index.html"
-            ><img src="./images/logo.svg" alt="Логотип сучасної пекарні"
-          /></a>
-          <ul>
-            <li>
-              <a class="nav-link" href="#section-traditions">Наші традиції</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#section-chefs">Шеф-кухарі</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#section-format">Формати</a>
-            </li>
-            <li>
-              <a class="nav-link" href="#section-contacts">Контакти</a>
-            </li>
-          </ul>
-        </nav>
-        <address>
-          <a class="nav-link address" href="tel:+380960000007">
-            + 38 (096) 000 00 07</a
-          >
-          <a class="nav-link address" href="mailto:shopbakery@gmail.com">
-            shopbakery@gmail.com
-          </a>
-          <a
-            class="nav-link address"
-            href="https://maps.app.goo.gl/L8YD9foGXcb9zHF79"
-            target="_blank"
-          >
-            Україна, м. Київ, вул. Січових Стрільців 54
-          </a>
-          <ul>
-            <li>
-              <a class="social-link" href="#">
-                <svg width="32" height="32">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
+        <div class="footer-container">
+          <nav class="nav-wrapper">
+            <a class="logo-footer" href="./index.html"
+              ><img src="./images/logo.svg" alt="Логотип сучасної пекарні"
+            /></a>
+            <ul class="list-link-footer">
+              <li>
+                <a class="nav-link" href="#section-traditions">Наші традиції</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#section-chefs">Шеф-кухарі</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#section-format">Формати</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#section-contacts">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="nav-wrapper">
+            <address class="address-wrapper">
+              <a class="nav-link address" href="tel:+380960000007">
+                + 38 (096) 000 00 07</a
+              >
+              <a class="nav-link address" href="mailto:shopbakery@gmail.com">
+                shopbakery@gmail.com
               </a>
-            </li>
-            <li>
-              <a class="social-link" href="#">
-                <svg width="32" height="32">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
+              <a
+                class="nav-link address"
+                href="https://maps.app.goo.gl/L8YD9foGXcb9zHF79"
+                target="_blank"
+              >
+                Україна, м. Київ,<br />
+                вул. Січових Стрільців 54
               </a>
-            </li>
-          </ul>
-          <div>
-            <a class="nav-link address" href="#" target="_blank"
-              >Політика конфіденційності</a
-            >
-            <p class="data-protected">&copy 2022 Дані захищені</p>
+              <ul class="social-list">
+                <li>
+                  <a class="social-link" href="#">
+                    <svg width="32" height="32">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-link" href="#">
+                    <svg width="32" height="32">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </address>
+            <div class="footer-parth">
+              <a class="nav-link address" href="#" target="_blank"
+                >Політика конфіденційності</a
+              >
+              <p class="data-protected">&copy 2022 Дані захищені</p>
+            </div>
           </div>
-        </address>
+        </div>
       </div>
     </footer>
   </body>

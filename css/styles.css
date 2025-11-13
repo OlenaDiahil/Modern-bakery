@@ -325,6 +325,7 @@ a {
   align-items: flex-end;
   padding: 24px;
   border-radius: 16px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -369,6 +370,9 @@ a {
 }
 
 .button-call.button-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 16px;
 }
 
@@ -378,6 +382,8 @@ a {
 }
 
 .descr-privacy {
+  text-align: center;
+  font-weight: 500;
   font-size: 12px;
 }
 
@@ -472,8 +478,9 @@ a {
   gap: 22px;
 }
 
-.social-link {
+.social-link svg {
   fill: var(--lights);
+  transition: fill 0.2s;
 }
 
 .social-link:hover svg {
@@ -503,6 +510,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px;
 }
 
 .modal {
@@ -524,4 +532,50 @@ a {
   position: absolute;
   top: 40px;
   right: 40px;
+  background-color: transparent;
+  stroke: var(--dark-brown);
+  fill: transparent;
+}
+
+.section-title.modal-title {
+  margin-bottom: 8px;
+}
+
+.modal-subtitle {
+  text-align: center;
+  color: var(--dark-green);
+  margin-bottom: 72px;
+}
+
+.form-input {
+  font-size: 16px;
+  line-height: 1.17;
+  width: 100%;
+  background-color: transparent;
+  color: var(--dark-brown);
+  padding: 16px 42px;
+  border: 1px solid var(--light-brown);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.form-input:focus {
+  border-color: var(--light-green);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--light-brown);
+}
+
+.form-input:focus::placeholder {
+  color: var(--dark-brown);
+}
+
+.form-input.modal-input {
+  margin-bottom: 32px;
+}
+
+.button-form.button-modal {
+  margin-bottom: 24px;
 }

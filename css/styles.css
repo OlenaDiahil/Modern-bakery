@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -570,6 +574,17 @@ button {
   justify-content: center;
   align-items: center;
   gap: 33px;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .container-formats {
+    margin-bottom: 32px;
+  }
+}
+
+.swiper-container {
+  overflow: hidden;
 }
 
 .button-arrow {
@@ -579,6 +594,7 @@ button {
 @media screen and (min-width: 768px) {
   .button-arrow {
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     width: 44px;
@@ -600,15 +616,14 @@ button {
   background-color: var(--dark-brown);
 }
 
-.list-formats {
+.swiper-slide.card {
   display: flex;
-  gap: 20px;
+  justify-content: center;
 }
 
-.item-format {
+.card-format {
   width: 321px;
   height: 442px;
-  flex-basis: calc((100% - 40px) / 3);
   background-image: linear-gradient(
     180deg,
     rgba(49, 38, 26, 0) 55.21%,
@@ -624,8 +639,8 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
-  .item-format {
-    max-width: 349px;
+  .card-format {
+    width: 349px;
     height: 444px;
   }
 }
@@ -643,6 +658,24 @@ button {
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 16px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.pagination-button {
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  background-color: var(--light-brown);
+}
+
+.pagination-button-active {
+  background-color: var(--light-green);
 }
 
 /* contacts */
@@ -755,23 +788,44 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  top: 112px;
 }
 
 .footer-container::before {
-  width: 181px;
-  height: 342px;
+  width: 92px;
+  height: 196px;
   background-image: url(../images/baguette.png);
-  transform: rotate(-10deg);
-  left: -33px;
+  transform: rotate(6.44deg);
+  left: -20px;
+  bottom: 259px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container::before {
+    width: 181px;
+    height: 342px;
+    transform: rotate(-10deg);
+    left: -33px;
+    bottom: -200px;
+  }
 }
 
 .footer-container::after {
-  width: 305px;
-  height: 330px;
+  width: 111px;
+  height: 120px;
   background-image: url(../images/two-baguette.png);
-  transform: rotate(25deg);
-  right: 18px;
+  transform: rotate(20deg);
+  right: -22px;
+  bottom: -43px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container::after {
+    width: 305px;
+    height: 330px;
+    transform: rotate(25deg);
+    right: 18px;
+    bottom: -200px;
+  }
 }
 
 .nav-wrapper {
